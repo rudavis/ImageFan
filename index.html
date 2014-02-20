@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="css/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.js"></script>
+	<script>
+	$(function() {
+
+
+
+
+    $('#fan').hover(function() {
+      $('#fan img:last').prev().addClass('rotate15','slow');
+      $('#fan img:last').addClass('rotate30','slow');
+    }, function() {
+      $('#fan img:last').prev().removeClass('rotate15','slow');
+      $('#fan img:last').removeClass('rotate30','slow');
+    });
+	});
+	</script>
+	<style>
+    div {margin-left:100px;}
+    img {position: absolute;width: 200px;}
+    .test {
+      margin-left: 200px;
+    }
+    .rotate15 
+    {
+      behavior:url(-ms-transform.htc);
+      /* Firefox */
+      -moz-transform:rotate(15deg);
+      /* Safari and Chrome */
+      -webkit-transform:rotate(15deg);
+      /* Opera */
+      -o-transform:rotate(15deg);
+      /* IE9 */
+      -ms-transform:rotate(15deg);
+    }
+    .rotate30
+    {
+      behavior:url(-ms-transform.htc);
+      /* Firefox */
+      -moz-transform:rotate(30deg);
+      /* Safari and Chrome */
+      -webkit-transform:rotate(30deg);
+      /* Opera */
+      -o-transform:rotate(30deg);
+      /* IE9 */
+      -ms-transform:rotate(30deg);
+    }
+    .rotate45 
+    {
+      behavior:url(-ms-transform.htc);
+      /* Firefox */
+      -moz-transform:rotate(45deg);
+      /* Safari and Chrome */
+      -webkit-transform:rotate(45deg);
+      /* Opera */
+      -o-transform:rotate(45deg);
+      /* IE9 */
+      -ms-transform:rotate(45deg);
+    }
+	</style>
+</head>
+<body>
+<h1>Fan Images</h1>
+
+<div id="fan">
+  <img src="img/ace_of_clubs.jpg" alt="">
+  <img src="img/ace_of_spades.jpg" alt="">
+  <img src="img/ace_of_diamonds.jpg" alt="">
+</div>
+
+
+</body>
+</html>
